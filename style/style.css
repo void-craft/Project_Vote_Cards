@@ -1,0 +1,365 @@
+/* ----------------------- VARIABLES SECTION ----------------------- */
+:root {
+    --primary-color: #0077b5;
+    --secondary-color: #6ec207;
+    --tertiary-color: #dddddd;
+    --shadow-color: rgb(110, 110, 110);
+    --body-text-color: #322a26;
+    --quote-color: gray;
+    --white: white;
+    --light-gray: #dddddd;
+    --black: #000000;
+    --font-family: 'Arial Narrow', Arial, sans-serif;
+    --title-fontsize: 24px;
+    --title-fontweight: 500;
+    --heading-fontsize: 1rem;
+    --heading-fontweight: bold;
+    --body-font-size: 13px;
+    --body-font-weight: normal;
+    --footer-fontsize: 26px;
+    --footer-fontweight: 300;
+    --button-radius: 12px;
+}
+
+/* ----------------------- DARK MODE VARIABLES ----------------------- */
+:root.dark-mode {
+    --primary-color: #121212;
+    --secondary-color: #393e46;
+    --tertiary-color: #6c757d;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --body-text-color: #e0e0e0;
+    --quote-color: #cccccc;
+    --white: #f0f0f0;
+    --light-gray: #393e46;
+    --black: #121212;
+    --button-radius: 12px;
+}
+
+/* --------------------------------- */
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--primary-color);
+    color: var(--body-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .header, 
+body.dark-mode .footer {
+    color: var(--white);
+}
+
+body.dark-mode .button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+body.dark-mode .card {
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+body.dark-mode .quote {
+    color: var(--quote-color);
+}
+
+body.dark-mode .footer a {
+    color: var(--white);
+}
+
+/* Dark Mode Button */
+.dark-mode-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.dark-mode-button:hover {
+    transform: scale(1.2);
+}
+
+/* ----------------------- GLOBAL STYLES ----------------------- */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ----------------------- HEADER SECTION ----------------------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: var(--title-fontsize);
+    font-weight: var(--title-fontweight);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 3px 5px var(--shadow-color);
+    width: 100%;
+}
+
+.header__title {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header__dark-mode-toggle {
+    color: var(--tertiary-color);
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 20px;
+}
+
+.header__dark-mode-toggle:hover {
+    transform: scale(1.2);
+    color: var(--secondary-color);
+}
+
+/* ----------------------- FOOTER SECTION ----------------------- */
+.footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--footer-fontsize);
+    font-weight: var(--footer-fontweight);
+    padding: 1rem 0;
+    box-shadow: 0 -4px 6px var(--shadow-color);
+    width: 100%;
+}
+
+.footer a {
+    color: var(--white);
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+/* ----------------------- CARD GRID SECTION ----------------------- */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "card1 card2 card3";
+    max-width: fit-content;
+    margin: 0 auto;
+    grid-gap: 4%;
+    justify-items: center;
+    padding: 2%;
+}
+
+/* ----------------------- CARD STYLES ----------------------- */
+.card {
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    width: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.card__theme-picture {
+    height: 120px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.card__theme-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__profile-picture {
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    position: relative;
+    margin-top: -65px;
+    z-index: 2;
+}
+
+.card__profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card__name {
+    margin: 0;
+    padding-top: 10px;
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.card__about {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 250;
+    color: var(--quote-color);
+    font-style: italic;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+/* ----------------------- TEXT DETAIL SECTION ----------------------- */
+.card__details {
+    padding: 0 1.5rem;
+}
+
+.card__details h3 {
+    font-family: var(--font-family);
+    font-size: var(--heading-fontsize);
+    font-weight: var(--heading-fontweight);
+    color: var(--primary-color);
+}
+
+.card__details p {
+    font-family: var(--font-family);
+    font-size: var(--body-font-size);
+    color: var(--body-text-color);
+}
+
+/* ----------------------- ICONS SECTION ----------------------- */
+.card__icons {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.card__icons a {
+    width: 30px;
+    height: 30px;
+}
+
+.card__icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ----------------------- BUTTON STYLES ----------------------- */
+.card__vote-button {
+    padding: 0.5rem 0.5rem;
+    border-radius: var(--button-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    width: 70%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 6px var(--shadow-color), 0 1px 3px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.card__vote-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 10px var(--shadow-color), 0 3px 6px var(--shadow-color);
+}
+
+.card__vote-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px var(--shadow-color), 0 1px 3px var(--shadow-color);
+}
+
+.card__vote-button.clicked {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.card__vote-button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ----------------------- GRID LAYOUT FOR CARDS ----------------------- */
+#card1 {
+    grid-area: card1;
+}
+
+#card2 {
+    grid-area: card2;
+}
+
+#card3 {
+    grid-area: card3;
+}
+
+/* ----------------------- MEDIA QUERIES ----------------------- */
+
+/* Moderate Screens */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card3";
+        grid-gap: 20px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .header__dark-mode-toggle {
+    font-size: 2rem;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+
+/* Small Screens */
+@media screen and (max-width: 384px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3";
+        grid-gap: 20px;
+    }
+
+    .header {
+        font-size: 14px;
+    }
+
+    .header__dark-mode-toggle {
+    font-size: 1.5rem;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}

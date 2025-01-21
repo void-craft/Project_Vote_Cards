@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>President</title>
+</head>
+<!-- BODY -->
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="header__title">Who Is Your President?</h1>
+        <button onclick="toggleDarkMode()" id="darkModeToggle" class="header__dark-mode-toggle"
+            aria-label="Toggle Dark Mode"> ☾ </button>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <!-- PROFILE CARD 1 -->
+        <section class="card card--hema" id="card1">
+            <div class="card__theme-picture">
+                <img src="https://i.imgur.com/eMTAhOv.png" alt="Theme Photo">
+            </div>
+            <div class="card__profile-picture">
+                <img src="https://i.imgur.com/4lX9La0.jpeg" alt="Hema's Profile Photo">
+            </div>
+            <h2 class="card__name">Hema</h2>
+            <p class="card__about">"Limitaría la acumulación de riqueza, aumentaría el salario mínimo."</p>
+            <button class="card__vote-button" id="voteButton1">Vote</button>
+            <div class="card__details">
+                <h3 class="card__details-title">Skills</h3>
+                <p class="card__details-text">Enseñanza, Creación de Contenido, Escritura.</p>
+                <h3 class="card__details-title">Interests</h3>
+                <p class="card__details-text">Gatos, Películas de Terror, Tejer, Misterios de Asesinatos.</p>
+            </div>
+            <div class="card__icons">
+                <a href="https://github.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
+                </a>
+                <a href="https://x.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://i.imgur.com/S4Vbxk5.png" alt="X">
+                </a>
+            </div>
+        </section>
+
+        <!-- PROFILE CARD 2 -->
+        <section class="card card--noemi" id="card2">
+            <div class="card__theme-picture">
+                <img src="https://i.imgur.com/eMTAhOv.png" alt="Theme Photo">
+            </div>
+            <div class="card__profile-picture">
+                <img src="https://i.imgur.com/l2jAXtF.png" alt="Noemi's Profile Photo">
+            </div>
+            <h2 class="card__name">Noemi</h2>
+            <p class="card__about">"Invertiría en ayudar a las familias... otros países europeos, como Portugal."</p>
+            <button class="card__vote-button" id="voteButton2">Vote</button>
+            <div class="card__details">
+                <h3 class="card__details-title">Skills</h3>
+                <p class="card__details-text">Cocinar, Codear, Dibujar y Escuchar.</p>
+                <h3 class="card__details-title">Interests</h3>
+                <p class="card__details-text">Viajar, Leer, Codear, Ver Series, Jugar con mis Hijos.</p>
+            </div>
+            <div class="card__icons">
+                <a href="https://github.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
+                </a>
+                <a href="https://x.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://i.imgur.com/S4Vbxk5.png" alt="X">
+                </a>
+            </div>
+        </section>
+
+        <!-- PROFILE CARD 3 -->
+        <section class="card card--nico" id="card3">
+            <div class="card__theme-picture">
+                <img src="https://i.imgur.com/eMTAhOv.png" alt="Theme Photo">
+            </div>
+            <div class="card__profile-picture">
+                <img src="https://i.imgur.com/CKU3u7j.png" alt="Nico's Profile Photo">
+            </div>
+            <h2 class="card__name">Nico</h2>
+            <p class="card__about">"Fomentaría la transparencia en el gobierno."</p>
+            <button class="card__vote-button" id="voteButton3">Vote</button>
+            <div class="card__details">
+                <h3 class="card__details-title">Skills</h3>
+                <p class="card__details-text">Maquetación Wordpress, Storytelling Interactivo, DJ.</p>
+                <h3 class="card__details-title">Interests</h3>
+                <p class="card__details-text">Música Electrónica, Tecnología, Ilusionismo.</p>
+            </div>
+            <div class="card__icons">
+                <a href="https://github.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
+                </a>
+                <a href="https://x.com" target="_blank" class="profile-card__social-link">
+                    <img src="https://i.imgur.com/S4Vbxk5.png" alt="X">
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#" class="footer__link">About</a>
+        <a href="#" class="footer__link">FAQs</a>
+        <a href="#" class="footer__link">Contact</a>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
