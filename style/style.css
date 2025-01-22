@@ -2,13 +2,16 @@
 :root {
     --primary-color: #0077b5;
     --secondary-color: #6ec207;
-    --tertiary-color: #dddddd;
-    --shadow-color: rgb(110, 110, 110);
-    --body-text-color: #322a26;
-    --quote-color: gray;
-    --white: white;
-    --light-gray: #dddddd;
+    --tertiary-color: #f0f0f0;
+    --shadow-color: #323232;
+    --body-text-color: #333333;
+    --quote-color: #555555;
+    --button-enabled-color: #0077b5;
+    --button-disabled-color: #cccccc;
+    --white: #ffffff;
+    --light-gray: #e0e0e0;
     --black: #000000;
+/* ----------- FONTS ---------- */
     --font-family: 'Arial Narrow', Arial, sans-serif;
     --title-fontsize: 24px;
     --title-fontweight: 500;
@@ -26,17 +29,17 @@
     --primary-color: #121212;
     --secondary-color: #393e46;
     --tertiary-color: #6c757d;
-    --shadow-color: rgba(0, 0, 0, 0.6);
+    --shadow-color: #000000;
     --body-text-color: #e0e0e0;
-    --quote-color: #cccccc;
-    --white: #f0f0f0;
+    --quote-color: #b0b0b0;
+    --button-enabled-color: #6ec207;
+    --button-disabled-color: #555555;
+    --white: #f5f5f5;
     --light-gray: #393e46;
     --black: #121212;
-    --button-radius: 12px;
 }
 
-/* --------------------------------- */
-/* Dark Mode Styles */
+/* ----------------------- DARK MODE STYLES ----------------------- */
 body.dark-mode {
     background-color: var(--primary-color);
     color: var(--body-text-color);
@@ -45,6 +48,10 @@ body.dark-mode {
 
 body.dark-mode .header, 
 body.dark-mode .footer {
+    color: var(--white);
+}
+
+body.dark-mode .footer a {
     color: var(--white);
 }
 
@@ -62,11 +69,6 @@ body.dark-mode .quote {
     color: var(--quote-color);
 }
 
-body.dark-mode .footer a {
-    color: var(--white);
-}
-
-/* Dark Mode Button */
 .dark-mode-button {
     background: none;
     border: none;
@@ -209,7 +211,7 @@ body {
     object-fit: cover;
     border-radius: 50%;
 }
-
+/* ------------------------- CARD NAME ------------------------- */
 .card__name {
     margin: 0;
     padding-top: 10px;
@@ -297,12 +299,12 @@ body {
 }
 
 .card__vote-button:disabled {
-    background-color: gray;
+    background-color: var(--button-disabled-color);
     cursor: not-allowed;
     box-shadow: none;
 }
 
-/* ----------------------- GRID LAYOUT FOR CARDS ----------------------- */
+/* ----------------------- GRID NAMES FOR CARDS ----------------------- */
 #card1 {
     grid-area: card1;
 }
@@ -316,7 +318,6 @@ body {
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
-
 /* Moderate Screens */
 @media screen and (max-width: 768px) {
     .container {
@@ -363,3 +364,4 @@ body {
         font-size: 12px;
     }
 }
+/* ----------------------- END OF CODE ----------------------- */
