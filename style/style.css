@@ -70,11 +70,11 @@ body.dark-mode .quote {
 }
 
 .dark-mode-button {
+    margin-right: 30px;
     background: none;
     border: none;
     color: var(--white);
     cursor: pointer;
-    margin-left: 1rem;
     transition: transform 0.2s ease;
 }
 
@@ -102,9 +102,10 @@ body {
     font-family: var(--font-family);
     font-size: var(--title-fontsize);
     font-weight: var(--title-fontweight);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     box-shadow: 0 3px 5px var(--shadow-color);
     width: 100%;
+    max-width: 100%;
 }
 
 .header__title {
