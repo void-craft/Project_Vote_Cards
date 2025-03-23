@@ -5,7 +5,6 @@ This is a simple web application that allows users to vote for their favorite ca
 
 ![image](https://github.com/user-attachments/assets/469d657e-f2eb-4927-84f7-6072f587176a)
 ![image](https://github.com/user-attachments/assets/dfad748f-eedd-471c-9a2c-1a1ddb84d147)
-![image](https://github.com/user-attachments/assets/3ca5ed03-b49c-4716-88eb-8213e6e30f9b)
 
 ## Features
 - Profile cards with candidate details
@@ -33,6 +32,8 @@ This is a simple web application that allows users to vote for their favorite ca
 - Click on the "Vote" button to vote for a candidate.
 - Toggle dark mode using the moon icon in the header.
 - Explore the candidate profiles and their social media links.
+
+<img src="https://github.com/user-attachments/assets/fb502cb8-d5f1-427f-ba45-679c73d3a498" width="150">
 
 ## File Structure
 ```
